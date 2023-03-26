@@ -186,6 +186,7 @@ body.nav-active { overflow: hidden; }
   --bg: var(--white);
   color: var(--oxford-blue);
   font-weight: var(--fw-600);
+  box-shadow: 0 0 0 2px var(--black)
 }
 
 :is(.headline-lg, .headline-md) .span {
@@ -356,7 +357,7 @@ display: inline;
   transition: var(--transition);
 }
 
-.navbar-link:is(:hover, :focus-visible) { color: var(--oxford-blue); }
+.navbar-link:is(:hover, :focus-visible) { color:rgb(255, 72, 0); }
 
 .overlay {
   position: fixed;
@@ -533,8 +534,53 @@ display: inline;
 	text-align: center;
 	margin-top: 5rem;
 }
+.about-us {
+  margin-top: 0px;
+  padding-top: 120px;
+  padding-bottom: 20px;
+}
+
+.about-us .left-image {
+  margin-right: 30px;
+}
+
+.about-us .section-heading h2 {
+  margin-right: 60px;
+}
+
+.about-us .section-heading p {
+  margin-top: 50px;
+}
+
+.about-us .fact-item .icon {
+  width: 45px;
+  height: 45px;
+}
+
+.about-us .fact-item {
+  margin-top: 45px;
+}
+
+.about-us .fact-item .count-digit {
+  font-size: 48px;
+  font-weight: 700;
+  color:#f45e29;
+  margin-top: 5px;
+}
+
+.about-us .fact-item .count-title {
+  font-size: 15px;
+  color: #f45e29;
+}
+
+.about-us .fact-item p {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
 
 .cta {
+ 
   background-image: linear-gradient(to right, red , yellow);
   padding: 48px 24px;
   text-align: center;
@@ -546,8 +592,14 @@ display: inline;
 
 
 
-
+/* .footer{
+  position: relative;
+bottom: 140px;
+overflow: hidden;
+} */
 .footer-top .container {
+  
+
   display: grid;
   gap: 24px;
 }
