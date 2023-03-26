@@ -1,6 +1,34 @@
 'use strict';
 
 
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get references to the two hero sections
+  const hero1 = document.querySelector(".hero");
+  const hero2 = document.querySelector(".hero2");
+
+  // Hide the second section
+  hero2.style.display = "none";
+
+  // Set an interval to switch between the two sections every 3 seconds
+  setInterval(function () {
+
+    // Check which section is currently displayed
+    if (hero1.style.opacity === "1") {
+      // If the first section is displayed, switch to the second section
+      hero1.style.opacity = "0";
+      hero2.style.opacity = "1";
+      setTimeout(() => { hero1.style.display = "none"; hero2.style.display = "block"; }, 500);
+    } else {
+      // If the second section is displayed, switch to the first section
+      hero1.style.opacity = "1";
+      hero2.style.opacity = "0";
+      setTimeout(() => { hero2.style.display = "none"; hero1.style.display = "block"; }, 500);
+    }
+  }, 5000);
+  
+  });
 
 /**
  * add eventListener on multiple elements

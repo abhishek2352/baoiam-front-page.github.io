@@ -60,7 +60,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 li { list-style: none; }
@@ -190,8 +189,11 @@ body.nav-active { overflow: hidden; }
 }
 
 :is(.headline-lg, .headline-md) .span {
-  color: var(--light-coral);
-  display: inline;
+  background: linear-gradient(
+    to right, #f32121, #ffa908);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+display: inline;
 }
 
 .section-subtitle {
@@ -399,6 +401,11 @@ body.nav-active { overflow: hidden; }
   gap: 12px;
 }
 
+.section.hero2,
+.section.hero3 {
+  opacity: 0;
+  display: none;
+}
 
 
 
